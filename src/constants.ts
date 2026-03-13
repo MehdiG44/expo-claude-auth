@@ -16,8 +16,8 @@ export const CLAUDE_PROFILE_URL = 'https://api.anthropic.com/api/oauth/profile';
  */
 export const CLAUDE_REDIRECT_URI = 'https://platform.claude.com/oauth/code/callback';
 
-/** Scopes matching Claude Code CLI exactly. */
-export const CLAUDE_SCOPES = 'org:create_api_key user:profile user:inference user:sessions:claude_code user:mcp_servers';
+/** Scopes matching Claude Code CLI desktop (verified from macOS Keychain). */
+export const CLAUDE_SCOPES = 'user:profile user:inference user:sessions:claude_code user:mcp_servers';
 
 /** SecureStore keys for token persistence. */
 export const STORE_KEYS = {

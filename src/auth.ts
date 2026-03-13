@@ -87,7 +87,8 @@ export async function refreshAccessToken(
       grant_type: 'refresh_token',
       client_id: config?.clientId ?? CLAUDE_CLIENT_ID,
       refresh_token: refreshToken,
-      scope: config?.scopes ?? CLAUDE_SCOPES,
+      // scope intentionally omitted — Claude's token endpoint rejects it with invalid_scope.
+      // Per OAuth spec, omitting scope preserves the originally granted scopes.
     }),
   });
 
